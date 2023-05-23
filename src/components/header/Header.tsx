@@ -1,4 +1,4 @@
-import React , { ReactElement }from "react";
+import React , { useEffect }from "react";
 import { Separator } from "../reused-components/ReusedComponents";
 import { NavOpenButton } from "./nav-open-btn/NavOpenButton";
 import { SlClose } from 'react-icons/sl';
@@ -7,14 +7,33 @@ import './Header.css'
 
 export const Header = () => {
 
-  const AddEventOnElements = (elements: any[], eventType: string, callback: any) => {
+  const addEventOnElements = (elements: NodeListOf<any>, eventType: string, callback: any) => {
     for (let i = 0; i < elements.length; i++) {
       elements[i].addEventListener(eventType, callback);
     }
   }
 
+  const removeEventOnElements = (elements: NodeListOf<any>, eventType: string, callback: any) => {
+    for (let i = 0; i < elements.length; i++) {
+      elements[i].removeEventListener(eventType, callback);
+    }
+  }
 
-  const elements = document.querySelectorAll('[data-nav-toggler]') //nav-open-btn
+
+  const elements = document.querySelectorAll('[data-nav-toggle]') //nav-open-btn
+  const navbar = document.querySelector('.navbar')
+  const overlay = document.querySelector('.overlay')
+
+  const toogleNavBar = () => {
+    navbar?.classList.toggle('active');
+    overlay?.classList.toggle('active');
+    document.body.classList.toggle('nav-active');
+  }
+
+  useEffect(() => {
+    addEventOnElements(elements, 'click', toogleNavBar);
+    return () => removeEventOnElements(elements, 'click', toogleNavBar)
+  })
 
   const dataNavbar = [
     {name: "Home", ref: "#home"},
@@ -36,7 +55,7 @@ export const Header = () => {
 
         <nav className="navbar">
           
-          <button className="close-btn" aria-label="close menu" data-nav-toggler>
+          <button className="close-btn" aria-label="close menu" data-nav-toggle>
             <SlClose aria-hidden="true"/>
           </button>
 
@@ -80,7 +99,7 @@ export const Header = () => {
 
         </nav>
 
-        <div className="overlay" data-nav-toggler></div>    
+        <div className="overlay" data-nav-toggle></div>    
       </div>
     </header>
   );
