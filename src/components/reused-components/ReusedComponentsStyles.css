@@ -1,0 +1,54 @@
+.separator {
+  width: 8px;
+  height: 8px;
+  border: 1px solid var(--green-italy-flag);
+  transform: rotate(45deg);
+}
+
+
+.btn {
+  position: relative;
+  color: var(--gold-crayola);
+  font-size: var(--font-size-label-2);
+  font-weight: var(--weight-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--letterSpacing-5);
+  max-width: max-content;
+  border: 2px solid var(--gold-crayola);
+  padding: 12px 45px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.btn:before {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200%;
+  height: 200%;
+  border-radius: var(--radius-circle);
+  background-color: var(--gold-crayola);
+  transition: var(--transition-2);
+  z-index: -1;
+}
+
+.btn .text { transition: var(--transition-1);}
+
+.btn .text-2 {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: min-content;
+  color: var(--smoky-black-1);
+}
+
+.btn:is(:hover, :focus-visible) ::before { bottom: -50% }
+.btn:is(:hover, :focus-visible) .text-1 { transform: translateY(-40px); }
+.btn:is(:hover, :focus-visible) .text-2 {
+  top: -50%;
+  transform: translate( -50%, -50%);
+}
+
