@@ -1,4 +1,5 @@
 .nav-open-btn {
+  background-color: transparent;
   display: block;
   height: max-content;
   justify-content: center;
@@ -9,6 +10,7 @@
 
 .nav-open-btn .line {
   border: 1px solid black;
+  background-color: black;
   width: 30px;
   height: 2px;
   background-color: var(--white);
