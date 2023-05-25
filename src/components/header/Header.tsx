@@ -22,12 +22,10 @@ export const Header = () => {
 
   const handleHeaderOnScroll = () => {
     const AddAndRemoveActiveClass = () => {
-      if(window.scrollY > 50) {
-        header?.classList.add('active');
-        hideHeader();
-      } else {
-        header?.classList.remove('active');
-      } 
+      if(window.scrollY > 50) header?.classList.add('active');
+      else header?.classList.remove('active');
+      // hideHeader();
+      
     }; 
 
     window.addEventListener('scroll', AddAndRemoveActiveClass );
