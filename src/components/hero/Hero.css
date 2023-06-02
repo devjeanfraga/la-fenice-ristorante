@@ -75,19 +75,16 @@
   margin-inline: auto;   
 }
 
-.btn.btn-primary {
+/* .btn.btn-primary {
   color: var(--black);
   border-color: var(--black);
-}
+} */
 
 .hero-btn {
   position: absolute;
-  bottom: 0;
-  top: 385px;
-  right: 0px; 
+  top: 560px;
+  right: 110px; 
   z-index: 2;
-  width: 100px;
-  height: 100px;
   padding: 8px;
   display: flex;
   flex-flow: column nowrap;
@@ -96,14 +93,15 @@
   transform: scale(0.6);
 }
 
+.hero-btn,
 .hero-btn img {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
 }
 
 .hero-btn .span {
   position: absolute;
-  top: 68px;
+  top: 50px;
   color: var(--black);
   font-weight: var(--weight-bold);
   text-transform: uppercase;
@@ -118,7 +116,7 @@
   bottom: 0;
   top: 0;
   animation: rotate360 15s linear infinite;
-  border: 2px solid ; 
+  border: 3px solid ; 
   z-index: -1;
   border-color: var(--red-italy-flag) var(--red-italy-flag)  var(--green-italy-flag) var(--green-italy-flag);
 }

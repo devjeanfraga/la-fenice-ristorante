@@ -1,4 +1,5 @@
 import heroSlider  from '../../assets/images/hero-slider-4-light.webp';
+import { Button } from '../buttom/Button';
 import heroTableIcon  from '../../assets/images/table-icon.webp'
 import './Hero.css'; 
 
@@ -18,18 +19,19 @@ export const Hero = () => {
 
           <h1 className="display-1 hero-title slider-reveal">
             Piatti Tradizionali <br/> 
-            Sopore & Fantasia  
+            Sapore & Fantasia  
           </h1>
           
           <p className="body-2 hero-text slider-reveal">
             Vieni con la famiglia e prova la gioia del cibo appetitoso
           </p>
+{/* 
+          <a href="#" className="btn slider-reveal">
+            <span className="text text-1">Visualizza il nostro menu </span>
 
-          <a href="#" className="btn btn-primary slider-reveal">
-            <span className="text text-1">Visualizza il nostro menu</span>
-
-            <span className="text text-2" aria-label="true">Visualizza il nostro menu</span>
-          </a>
+            <span className="text text-2" aria-hidden="true">Visualizza il nostro menu</span>
+          </a> */}
+          <Button/>
         </li>
 
       </ul>
