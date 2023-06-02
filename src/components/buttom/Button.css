@@ -40,10 +40,8 @@
   transform: translateX(-50%);
   min-width: min-content;
   font-weight: 600;
-  color: var(--white);
 }
 
-.btn:is(:hover, :focus-visible) { border-color: var(--green-italy-flag);}
 .btn:is(:hover, :focus-visible)::before { bottom: -50%; }
 .btn:is(:hover, :focus-visible) .text-1 { transform: translateY(-50px);}
 
