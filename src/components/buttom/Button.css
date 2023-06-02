@@ -20,7 +20,6 @@
   width: 200%;
   height: 200%;
   margin: 0;
-  border-radius: var(--radius-circle);
   background-color:  var(--green-italy-flag);
   transition: var(--transition-2);
   z-index: -1;
