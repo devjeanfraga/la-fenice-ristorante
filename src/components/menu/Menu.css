@@ -1,0 +1,33 @@
+.menu .section-title { margin-block-end:  40px; }
+
+.menu .grid-list { margin-block-end: 50px; }
+
+.menu-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.menu-card .card-banner {
+  flex-shrink: 0;
+  border-radius:  var(--radius-24);
+}
+
+.menu-card .card-title { transition: var(--transiytion-1); }
+
+.menu-card .card-title:is(:hover, :focus-visible ) { color: var(--green-italy-flag); }
+
+.menu-card .span {
+  color: var(--black);
+  margin-block: 10px;
+}
+
+.menu-card .card-text {
+  color: var(--black);
+  line-height: var(--lineHeight-4);
+}
+
+.menu-text .span {
+  display: inline-block;
+  color: var(--red-italy-flag);
+}

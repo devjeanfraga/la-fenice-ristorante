@@ -3,6 +3,7 @@ import { Preload } from './components/preload/Preload';
 import { Topbar} from './components/topbar/Topbar';
 import { Header } from './components/header/Header';
 import { Hero } from './components/hero/Hero';
+import { Menu } from './components/menu/Menu';
 import './App.css';
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
       <Topbar/>
       <Header/>
       <Hero/>
+      <Menu/>
     </div>
   );
 }
