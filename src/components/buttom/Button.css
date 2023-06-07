@@ -20,17 +20,20 @@
   width: 200%;
   height: 200%;
   margin: 0;
-  background-color:  var(--green-italy-flag);
+  background-color:  #0000009e;
   transition: var(--transition-2);
   z-index: -1;
 }
 
 .btn .text { 
   text-align: center;
+  font-weight: var(--weight-regular);
   transition: var(--transition-1);
 }
 
-.btn .text-1 { font-weight: 600; }
+.btn .text-1 { 
+  font-weight: 600; 
+}
 
 .btn .text-2 {
   position: absolute;
@@ -39,15 +42,15 @@
   left: 50%;
   transform: translateX(-50%);
   min-width: min-content;
-  font-weight: 600;
+  color: var(--white);
 }
 
 .btn:is(:hover, :focus-visible)::before { bottom: -50%; }
 .btn:is(:hover, :focus-visible) .text-1 { transform: translateY(-50px);}
 
 .btn:is(:hover, :focus-visible) .text-2 {
-  top: 20%;
-  bottom: 20%;
+  top: calc(50% - 20px);
+  transform: translateY(-50%, -50%);
 }
 .btn-secondary {
   background-color: var(--gold-crayola);
