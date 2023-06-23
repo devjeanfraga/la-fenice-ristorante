@@ -25,12 +25,6 @@ export const Hero = () => {
           <p className="body-2 hero-text slider-reveal">
             Vieni con la famiglia e prova la gioia del cibo appetitoso
           </p>
-{/* 
-          <a href="#" className="btn slider-reveal">
-            <span className="text text-1">Visualizza il nostro menu </span>
-
-            <span className="text text-2" aria-hidden="true">Visualizza il nostro menu</span>
-          </a> */}
           <Button/>
         </li>
 

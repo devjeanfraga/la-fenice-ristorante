@@ -102,8 +102,8 @@
 .hero-btn .span {
   position: absolute;
   top: 50px;
-  color: var(--black);
-  font-weight: var(--weight-bold);
+  color: var(--white);
+  font-weight: var(--weight-regular);
   text-transform: uppercase;
   letter-spacing: var(--letterSpacing-1);
   line-height: var(--lineHeight-2);
@@ -116,9 +116,8 @@
   bottom: 0;
   top: 0;
   animation: rotate360 15s linear infinite;
-  border: 3px solid ; 
+  border: 3px solid black; 
   z-index: -1;
-  border-color: var(--red-italy-flag) var(--red-italy-flag)  var(--green-italy-flag) var(--green-italy-flag);
 }
 
 @keyframes rotate360 {
