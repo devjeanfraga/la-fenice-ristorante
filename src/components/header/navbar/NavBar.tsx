@@ -38,7 +38,7 @@ export const NavBar = ( { dataNavbar }: DataNavbar ) => {
       <SlClose aria-hidden="true"/>
     </button>
 
-    <a href="" className="logo">
+    <a href="#" className="logo">
       <img src={logo} width="165" height="50" alt="La Fenice - Home"/>
     </a>  
 
