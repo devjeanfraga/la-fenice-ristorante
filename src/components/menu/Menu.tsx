@@ -1,10 +1,11 @@
 import { MenuCard, MenuItem } from './MenuCard';
+import { SlClose } from 'react-icons/sl';
 import flanDiZucca from '../../assets/images/item-flan-di-zucca.jpg'
 import polenta from '../../assets/images/item-polenta.jpg'
 import tagliereRustico from '../../assets/images/item-tagliere-rustico-di-salumi-e-formaggi.png'
 import tartareDiManzo from '../../assets/images/item-tartare-di-manzo.jpg'
-
 import './Menu.css';
+import toogleList from '../../hooks/useToggle'
 
 const menuData: MenuItem[] = [
   {
@@ -33,23 +34,54 @@ const menuData: MenuItem[] = [
   }
 ]
 
+const handleClick  = (className: string) => {
+  const gridList =  document.querySelector(`.${className}`);
+}
+
 
 export const Menu = () => {
+  const [antipasti, setAntipasti] = toogleList(); 
+  const [primi, setPrimi] = toogleList(); 
+  const [secondi, setSecondi] = toogleList(); 
+
   return (
     <section className="menu" id="menu">
       <div className="container">
-        <h2 className="headline-1 section-title">Antipasti</h2>
-        <ul className="grid-list">
-          {menuData.map(item => <MenuCard {...item}/>)}
-        </ul>
-        <p className="menu-text">
-          Lunedi,<span className="span">20:00-23:30</span><br/>
-          Martedì, <span className="span">Chiuso</span><br/>
-          Mercoledì-Venerdí<span className="span">20:00-23:30</span><br/>
-          Sabato,<span className="span">12:00-15:00, 20:00-23:30</span><br/>
-          Domenica,<span className="span">12:00-15:30, 20:00-23:30</span><br/>
-        </p>
+        <h2 className="headline-1">Menu</h2>
+        
+        <div className="menu-section">
+        <h3 className= {`headline-2 section-btn ${ antipasti ? 'active': ''}`} onClick={setAntipasti}>Antipasti</h3>
+          <ul className={`grid-list ${antipasti ? 'active': ''}`}>
+            
+            {menuData.map(item => <MenuCard {...item}/>)}
+          </ul>
+        </div>
+
+        <div className="menu-section">
+        <h3 className= {`headline-2 section-btn ${ primi ? 'active': ''}`} onClick={setPrimi}>Primi Piatti</h3>
+          <ul className={`grid-list ${primi ? 'active': ''}`}>
+          
+            {menuData.map(item => <MenuCard {...item}/>)}
+          </ul>
+        </div>
+
+        <div className="menu-section">
+        <h3 className= {`headline-2 section-btn ${ secondi ? 'active': ''}`} onClick={setSecondi}>Secondi Piatti</h3>
+          <ul className={`grid-list ${secondi ? 'active': ''}`}>
+            {menuData.map(item => <MenuCard {...item}/>)}
+          </ul>
+        </div>
+
+        <div className="menu-hours">
+          <h3> Orari di apertura </h3>
+          <p>Lunedi<span className="span-hour"> 20:00-23:30</span></p>
+          <p>Martedì<span className="span-hour"> Chiuso </span></p>
+          <p>Mercoledì - Venerdí<span className="span-hour"> 20:00-23:30</span></p>
+          <p>Sabato<span className="span-hour"> 12:00-15:00, 20:00-23:30</span></p>
+          <p>Domenica<span className="span-hour"> 12:00-15:30, 20:00-23:30</span></p>
+        </div>
+
       </div>
     </section>
   );
-}
+};
