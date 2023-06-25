@@ -138,6 +138,7 @@ textarea {
 a, p, ul, li, button {
   line-height: normal;
   text-decoration: none;
+  color: var(--black);
 }
 
 li { list-style: none; }
@@ -189,7 +190,7 @@ body.nav-active { overflow: hidden }
 .title-2,
 .title-3,
 .title-4 {
-  color: var(-black);
+  color: var(--black);
   font-family: var(--fontFamily-dm_sans);
   font-weight: var(--weight-regular);
   line-height: var(--lineHeight-2);

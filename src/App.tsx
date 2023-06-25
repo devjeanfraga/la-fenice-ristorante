@@ -4,6 +4,7 @@ import { Topbar} from './components/topbar/Topbar';
 import { Header } from './components/header/Header';
 import { Hero } from './components/hero/Hero';
 import { Menu } from './components/menu/Menu';
+import { About } from './components/about/About';
 import './App.css';
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
       <Topbar/>
       <Header/>
       <Hero/>
+      <About/>
       <Menu/>
     </div>
   );

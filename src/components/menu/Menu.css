@@ -17,7 +17,7 @@
   width: max-content;
   margin: auto;
   padding: 1rem;
-  margin-bottom: 30px;
+  margin-bottom: 32px;
   text-align: center;
 }
 
@@ -44,7 +44,6 @@
 .menu .grid-list { 
   background-color: var(--white);
   margin-block-end: 50px;
-  /* border: 2px solid black; */
   position: relative;
   display: none;
 }
@@ -56,7 +55,6 @@
 .grid-list li {  background-color: #f2f2f2;}
 
 .menu-card {
-  /* border: 2px solid rgb(235, 5, 5); */
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
@@ -69,7 +67,6 @@
 .menu-card .card-banner {
   width: 50px;
   position: relative;
-  /* border: 2px solid blue; */
   width: 60%;
 }
 
@@ -81,7 +78,6 @@
 
 
 .menu-card .card-text-container {
-  /* border: 2px solid rgb(122, 3, 219); */
   text-align: center;
   width: 95%;
   position: relative;
@@ -136,7 +132,7 @@
 
  .menu-hours p { 
   font-size: var(--fontSize-label-1);
-  color: rgb(80, 78, 78);
+  color: #303030b8;
   font-weight: var(--weight-bold);
   line-height: 2em;
   letter-spacing: 1px;
