@@ -1,0 +1,56 @@
+.infos {
+  background-color: var(--white);
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  color: var(--black);
+}
+
+.infos h3 {
+  color: var(--black);
+  font-weight: var(--weight-regular);
+  text-align: center;
+  padding-top: 10px;
+  width: 80%;
+  margin: auto;
+  margin-bottom: 20px;
+ }
+
+ .infos-container, 
+ .hours, 
+ .location, 
+ .contact  {
+  padding: 20px;
+  padding-bottom: 40px;
+  display:  flex;
+  flex-flow: column nowrap;
+}
+
+.location, .contact {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hours p { 
+  font-size: var(--fontSize-label-1);
+  color: #303030b8;
+  font-weight: var(--weight-bold);
+  line-height: 2em;
+  letter-spacing: 0.8px;
+  display: flex; 
+  justify-content: space-between;
+}
+
+.hours .span-hour { 
+  color: var(--eerie-black-4);
+  padding-left: 5px;
+}
+
+.info-icons {
+  margin-right: 8px;
+  position: relative;
+  top: 3px
+}
+
