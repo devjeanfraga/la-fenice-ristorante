@@ -1,5 +1,4 @@
 import { MenuCard, MenuItem } from './MenuCard';
-import { SlClose } from 'react-icons/sl';
 import flanDiZucca from '../../assets/images/item-flan-di-zucca.jpg'
 import polenta from '../../assets/images/item-polenta.jpg'
 import tagliereRustico from '../../assets/images/item-tagliere-rustico-di-salumi-e-formaggi.png'
@@ -32,12 +31,7 @@ const menuData: MenuItem[] = [
     img: tartareDiManzo,
     description: 'Un piatto fresco profumato e proteico, personalizzato con aromi e verdure croccanti.',
   }
-]
-
-const handleClick  = (className: string) => {
-  const gridList =  document.querySelector(`.${className}`);
-}
-
+];
 
 export const Menu = () => {
   const [antipasti, setAntipasti] = toogleList(); 
@@ -71,16 +65,6 @@ export const Menu = () => {
             {menuData.map(item => <MenuCard {...item}/>)}
           </ul>
         </div>
-
-        <div className="menu-hours">
-          <h3> Orari di apertura </h3>
-          <p>Lunedi<span className="span-hour"> 20:00-23:30</span></p>
-          <p>Martedì<span className="span-hour"> Chiuso </span></p>
-          <p>Mercoledì - Venerdí<span className="span-hour"> 20:00-23:30</span></p>
-          <p>Sabato<span className="span-hour"> 12:00-15:00, 20:00-23:30</span></p>
-          <p>Domenica<span className="span-hour"> 12:00-15:30, 20:00-23:30</span></p>
-        </div>
-
       </div>
     </section>
   );

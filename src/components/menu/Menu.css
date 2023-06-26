@@ -1,11 +1,14 @@
 .menu {
   background-color: var(--white);
-  margin-top: 2em;
+  padding-top: 2em;
+  border-top: 2px solid;
 }
 
 .menu .container {
   display: flex;
   flex-flow: column nowrap;
+  background-color: var(--white);
+
   /* border: 2px solid rgb(5, 235, 162); */
 }
 

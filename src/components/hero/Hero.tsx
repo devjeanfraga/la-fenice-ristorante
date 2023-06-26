@@ -30,15 +30,6 @@ export const Hero = () => {
 
       </ul>
 
-      <button className="slider-btn" aria-label="slider to previous">
-        {/* some icon */}
-      </button>
-
-      <a href="#" className="hero-btn">
-          <img src={heroTableIcon} alt=""/>
-          <span className="label-2 text-center span">Prenota un tavolo</span>
-      </a>
-
     </section>   
   );
 }
