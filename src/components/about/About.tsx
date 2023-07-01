@@ -45,9 +45,10 @@ export const About = () => {
 
   return (
     <section className="about">
-      <h2 className='headline-1'>Chi Siamo</h2>
       <div className="about-content">
+        
         <div className="about-text-container">
+          <h2 className='headline-1'>Chi Siamo</h2>
           <p>
             {textAbout}
           </p>
