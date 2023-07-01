@@ -30,6 +30,30 @@ const menuData: MenuItem[] = [
     price: '14,00 €',
     img: tartareDiManzo,
     description: 'Un piatto fresco profumato e proteico, personalizzato con aromi e verdure croccanti.',
+  },
+  {
+    foodName: 'Flan di zucca',
+    price: '8,00 €',
+    img: flanDiZucca,
+    description: 'Deliziosi antipasti autunnali, piccole monoporzioni dal sapore delicato, ideali come aperitivo sfizioso. In contrasto con il gusto dolce della polpa di zucca, abbiamo guarnito i flan con una crema al Gorgonzola, un formaggio erborinato dal sapore deciso.'
+  },
+  {
+    foodName: 'Polenta gratinata con funghi e formaggi',
+    price: '8,00 €',
+    img: polenta,
+    description: 'Piatto rustico, semplicissimo e molto saporito, perfetto per il giorni freddi e piovosi… una gustosa polenta gratinata con funghi e formaggio filante, facile e veloce, ideale anche come piatto unico.'
+  },
+  {
+    foodName: 'Tagliere rustico di salumi e formaggi',
+    price: '12,00 €',
+    img: tagliereRustico,
+    description: 'Un piatto semplice, almeno in apparenza, apprezzato da tutti perché ognuno può scegliere anche solo uno dei prodotti offerti',
+  },
+  {
+    foodName: 'Tartare di manzo',
+    price: '14,00 €',
+    img: tartareDiManzo,
+    description: 'Un piatto fresco profumato e proteico, personalizzato con aromi e verdure croccanti.',
   }
 ];
 
