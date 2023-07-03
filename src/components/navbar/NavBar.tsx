@@ -1,12 +1,15 @@
-import { useEffect } from 'react';
+// import { useEffect } from 'react';
 import { SlClose } from 'react-icons/sl';
-import { Separator } from '../../reused-components/ReusedComponents';
-import { addEventOnElements, removeEventOnElements } from '../../../helpers/helpers';
-import logo from '../../../assets/images/logo-la-fenice-3.webp';
+import { Separator } from '../reused-components/ReusedComponents';
+import logo from '../../assets/images/logo-la-fenice-3.webp';
 import './NavBar.css';
+
+
 
 interface DataNavbar {
   dataNavbar: Data[];
+  toggleNavBar?: boolean;
+  toggle: any;
 }
 
 interface Data {
@@ -14,32 +17,17 @@ interface Data {
   ref: string;
 }
 
-export const NavBar = ( { dataNavbar }: DataNavbar ) => {
-
-  const elements = document.querySelectorAll('[data-nav-toggle]') 
-  const navbar = document.querySelector('.navbar')
-  const overlay = document.querySelector('.overlay')
-
-  const toogleNavBar = () => {
-    navbar?.classList.toggle('active');
-    overlay?.classList.toggle('active');
-    document.body.classList.toggle('nav-active');
-  }
-
-  useEffect(() => {
-    addEventOnElements(elements, 'click', toogleNavBar);
-    return () => removeEventOnElements(elements, 'click', toogleNavBar)
-  })
+export const NavBar = ( { dataNavbar, toggleNavBar, toggle}: DataNavbar) => {
   
   return (
-    <nav className="navbar">
+    <nav className={`navbar ${toggleNavBar ? 'active': ''}`}>
           
-    <button className="close-btn" aria-label="close menu" data-nav-toggle>
+    <button className="close-btn" aria-label="close menu" onClick={toggle}>
       <SlClose aria-hidden="true"/>
     </button>
 
     <a href="#" className="logo">
-      <img src={logo} width="165" height="50" alt="La Fenice - Home"/>
+      <img src={logo} width="200" height="60" alt="La Fenice - Home"/>
     </a>  
 
     <ul className="navbar-list">
@@ -58,7 +46,7 @@ export const NavBar = ( { dataNavbar }: DataNavbar ) => {
     </ul>
 
     <div className="text-center">
-      <p className="headline-1 navbar-title">Veniteci a trovarci</p>
+      <p className="headline-1 navbar-title">Vi Aspettiamo</p>
 
       <address className="body-4">
         Via Tambellina, 46

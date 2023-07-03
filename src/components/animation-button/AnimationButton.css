@@ -1,4 +1,4 @@
-.nav-open-btn {
+.animation-button {
   background-color: transparent;
   display: block;
   height: max-content;
@@ -8,7 +8,7 @@
   padding-right: 0;
 }
 
-.nav-open-btn .line {
+.animation-button .line {
   border: 1px solid black;
   background-color: black;
   width: 30px;
@@ -24,9 +24,10 @@
   100% { transform: scaleX(0.5); }
 }
 
-.nav-open-btn .line-2 {
+.animation-button .line-2 {
   animation-delay: 150ms; 
 } 
-.nav-open-btn .line-3 { 
+.animation-button .line-3 { 
   animation-delay: 300ms; 
 } 
+
