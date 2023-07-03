@@ -8,8 +8,6 @@
   display: flex;
   flex-flow: column nowrap;
   background-color: var(--white);
-
-  /* border: 2px solid rgb(5, 235, 162); */
 }
 
 .menu .container .headline-1 { margin: 0 auto 1em auto;}
@@ -22,6 +20,7 @@
   padding: 1rem;
   margin-bottom: 32px;
   text-align: center;
+  /* border: 1px solid black; */
 }
 
 .section-btn::after {
@@ -31,10 +30,10 @@
   bottom: 0;
   width: 100%;
   height: 1px;
+  margin-bottom: 0.3em;
   transform: scale(0, 1);
   transition: 0.2s ease-in-out;
   background: -webkit-linear-gradient(left, #027017 40%,#027017 40%,#ffffff 50%,#eb0505 60%);
-
 }
 
 .menu .section-btn:hover, 
@@ -51,9 +50,7 @@
   display: none;
 }
 
-.menu .grid-list.active {
-  display: block;
-}
+.menu .grid-list.active { display: block; }
 
 .grid-list li {  background-color: #f2f2f2;}
 
@@ -64,7 +61,6 @@
   gap: 20px;
   margin-bottom: 10px;
   padding: 20px;
-  
 }
 
 .menu-card .card-banner {
@@ -79,21 +75,13 @@
   transition: var(--transiytion-1);
 }
 
-
 .menu-card .card-text-container {
   text-align: center;
   width: 95%;
   position: relative;
 }
 
-.menu-card .card-title { 
-  font-weight: var(--weight-regular);
-}
-
-
-/* .card-text .read {
-
-} */
+.menu-card .card-title { font-weight: var(--weight-regular); }
 
 .menu-card .title-2 {
   color: var(--black);
@@ -105,9 +93,7 @@
   line-height: var(--lineHeight-4);
 }
 
- .toggle-description {
-  display: none;
- }
+ .toggle-description {display: none; }
 
  .read-button {
   color: var(--green-italy-flag);
@@ -143,11 +129,8 @@
   justify-content: space-between;
 }
 
-.menu .menu-hours .span-hour { 
-  color: var(--eerie-black-4);
-}
+.menu .menu-hours .span-hour { color: var(--eerie-black-4); }
  
-
 /* media queries */
 
 @media (min-width: 500px) {
@@ -173,16 +156,32 @@
 
 @media (min-width: 1000px) {
 
-  .menu .grid-list.active {
+  .menu {
+    margin-top: 100px;
+  }
+
+  .menu .section-btn {
+    margin-bottom: 45px; 
+    padding: 0.5em;
+    font-size: 2.5em;
+  }
+
+  .section-btn::after { 
+    transform: scale(1, 1);
+    height: 0.2em; 
+  }
+
+  .menu .grid-list {
     box-sizing: border-box;
     display: grid;
     grid-template-columns: repeat(2, 50%);
-    padding: 1em;
+    justify-items: center;
+    padding: 3em;
   }
+
+  .menu .grid-list.active { display: none;}
   
-  .grid-list li {
-    width: 100%;
-  }
+  .grid-list li { width: 75%; }
 
   .menu-card {
     display: flex;
