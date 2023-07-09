@@ -54,3 +54,19 @@
   top: 3px
 }
 
+@media (min-width: 500px) {
+
+  .infos {margin-top: 100px}
+
+  .infos p { font-size: 1em;}
+
+  .infos .headline-1 { margin-bottom: 1em;}
+
+  .infos-container {
+    width: 100%;
+    flex-flow: row-reverse nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+  }
+}

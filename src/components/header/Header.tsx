@@ -1,31 +1,22 @@
+import { useEffect, useState } from "react";
 import { 
   NavBar,
-  NavOpenButton, 
-  logo 
+  AnimationButton, 
+  logo, 
+  useToggle
 } from "./headers-protocols";
+
 import './Header.css'
-import { useEffect } from "react";
 
 export const Header = () => {
-
-  const header = document.querySelector('.header');
-  let lastScrollPos = 0; 
-
-  const hideHeader = () => {
-    const isScrollBottom = lastScrollPos < window.scrollY 
-    isScrollBottom 
-      ? header?.classList.add('hide')
-      : header?.classList.remove('hide'); 
-
-    lastScrollPos = window.scrollY; 
-  }; 
+  const [ toggleNavBar, setToggleNavBar ] = useToggle();
+  const [ scrolled, setScrolled ] = useState(false);
 
   const handleHeaderOnScroll = () => {
+
     const AddAndRemoveActiveClass = () => {
-      if(window.scrollY > 50) header?.classList.add('active');
-      else header?.classList.remove('active');
-      // hideHeader();
-      
+      if(window.scrollY > 50) setScrolled(true); 
+      else setScrolled(false); 
     }; 
 
     window.addEventListener('scroll', AddAndRemoveActiveClass );
@@ -34,24 +25,25 @@ export const Header = () => {
 
   useEffect(() => handleHeaderOnScroll()); 
 
-  const dataNavbar = [
+  const dataLinks = [
     {name: "Home", ref: "#home"},
     {name: "Menu", ref: "#menu"},
     {name: "Chi siamo", ref: "#chiSiamo"},
-    {name: "Il cuoco", ref: "#ilCuoco"},
-    {name: "Richiede un preventivo", ref: "#richiedeUnPreventivo"},
     {name: "Contatti", ref: "#contatti"}
   ];
 
   return (
-    <header className="header">
+    <header className={`header ${ scrolled ? 'active': ''}`}>
       <div className="container">
-
         <a href="#" className="logo"><img src={ logo } width="165" height="50" alt="La Fenice - Home"/></a>
-        <NavOpenButton/>
-        <NavBar dataNavbar={ dataNavbar }/>
-        <div className="overlay" data-nav-toggle></div>   
+        
+        <AnimationButton toggle={setToggleNavBar} propClassName='nav-button' />
+        <NavBar dataNavbar={dataLinks} toggleNavBar={toggleNavBar} toggle={setToggleNavBar}/>
+        <div className={`overlay ${ toggleNavBar ? 'active' : ''}`}></div>  
 
+        <div className='nav-links'>
+          { dataLinks.map( (i) => <div className="link"><a href={i.ref} key={i.name.toLowerCase().replace(' ', '-')}>{i.name}</a></div>) }
+        </div> 
       </div>
     </header>
   );
