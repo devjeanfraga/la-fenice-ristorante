@@ -15,7 +15,6 @@ import {
   tagliolino
 } from '../assets/images/menu-items'
 
-
 import {
   tagliataDiManzo,
   cotolettaAllaMilanese,
@@ -30,7 +29,7 @@ import {
   guanciottoDiManzo
 } from '../assets/images/menu-items'
 
-export const data =  {
+export default () => ({
   antipasti: [
     {
       foodName: 'Flan di zucca',
@@ -193,5 +192,5 @@ export const data =  {
       description: ''
     },
   ]
-};
+});
 
