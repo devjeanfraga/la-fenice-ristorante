@@ -52,7 +52,11 @@
 
 .menu .grid-list.active { display: block; }
 
-.grid-list li {  background-color: #f2f2f2;}
+.grid-list li {  
+  margin-bottom: 1em;
+  border-radius: var(--radius-24);
+  background-color: #f2f2f2;
+}
 
 .menu-card {
   display: flex;
@@ -154,7 +158,7 @@
 
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 900px) {
 
   .menu {
     margin-top: 100px;
