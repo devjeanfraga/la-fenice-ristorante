@@ -1,6 +1,5 @@
 import heroSlider  from '../../assets/images/hero-slider-4-light.webp';
 import { Button } from '../buttom/Button';
-import heroTableIcon  from '../../assets/images/table-icon.webp'
 import './Hero.css'; 
 
 export const Hero = () => {

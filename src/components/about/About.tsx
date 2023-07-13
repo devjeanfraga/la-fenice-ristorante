@@ -44,7 +44,7 @@ export const About = () => {
   const currentSlide = (n: number) => showSlides(slideIdx = n);
 
   return (
-    <section className="about">
+    <section className="about" id='about'>
       <div className="about-content">
         
         <div className="about-text-container">

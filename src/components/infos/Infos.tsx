@@ -3,7 +3,7 @@ import { SlLocationPin, SlPhone, SlLogin } from 'react-icons/sl';
 
 export const Infos = () => {
   return (
-    <section className="infos">
+    <section className="infos" id='infos'>
       <h2 className='headline-1'> Informazione </h2>
       <div className="infos-container">
         <div className="hours">

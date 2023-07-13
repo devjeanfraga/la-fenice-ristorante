@@ -28,8 +28,8 @@ export const Header = () => {
   const dataLinks = [
     {name: "Home", ref: "#home"},
     {name: "Menu", ref: "#menu"},
-    {name: "Chi siamo", ref: "#chiSiamo"},
-    {name: "Contatti", ref: "#contatti"}
+    {name: "Chi siamo", ref: "#about"},
+    {name: "Contatti", ref: "#infos"}
   ];
 
   return (
